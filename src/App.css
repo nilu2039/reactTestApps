@@ -6,9 +6,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
+  margin-top: 50px;
 }
 
 .box {
+  animation-name: rainbow;
   width: auto;
   height: 100px;
   display: flex;
@@ -18,4 +20,58 @@ body {
 .icon {
   font-size: 35px;
   color: #ffffff;
+}
+
+.design {
+  font-size: 15px;
+  font-family: monospace;
+  color: #74B9FF;
+  margin-top: 210px;
+  text-align: center;
+  position: relative;
+  right: 35px;
+}
+
+.insta {
+  position: relative;
+  top: 255px;
+  right: 2px;
+  left: 500px;
+  font-size: 33px;
+  color: white;
+}
+.twitter {
+  position: relative;
+  top: 200px;
+  right: 2px;
+  left: 560px;
+  font-size: 33px;
+  color: white;
+}
+
+.follow {
+  position: relative;
+  top: 302px;
+
+  left: 380px;
+
+  font-size: 15px;
+  color:#F5BCBA;
+  font-family: monospace;
+}
+
+.winner {
+  font-size: 50px;
+  font-family: monospace;
+}
+
+
+
+@keyframes rainbow {
+  0% {
+    background-color: #F5BCBA;
+  }
+  100% {
+    background-color: aqua;
+  }
 }

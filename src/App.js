@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import Icon from "./components/Icon";
+import {FaInstagram, FaTwitter} from 'react-icons/fa';
+
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -20,6 +21,14 @@ const App = () => {
     setWinMessage("");
     itemArray.fill("empty", 0, 9);
   };
+
+  const crossFirst = () => {
+    setIsCross(true);
+  }
+
+  const circleFirst = () => {
+    setIsCross(false);
+  }
 
   const checkIsWinner = () => {
     if(itemArray[0] === itemArray[1]
@@ -64,7 +73,9 @@ const App = () => {
       }
 
 
+
   };
+  
 
   const changeItem = itemNumber => {
     if(winMessage){
@@ -86,7 +97,7 @@ const App = () => {
         <Col md={6} className="offset-md-3">
           {winMessage ?  
           (<div className="mt-2 mb-2">
-            <h1 className="text-success text uppercase text-center">
+            <h1 className="text-success text uppercase text-center winner">
               {winMessage}
             </h1>
             <Button 
@@ -94,7 +105,7 @@ const App = () => {
             </Button>
           </div>
           ):(
-             <h1 className= "text-center text-warning"> 
+             <h1 className= "text-center text-warning winner"> 
               {isCross ? "Cross": "Circle"} turns
              </h1>
           )}   
@@ -109,6 +120,17 @@ const App = () => {
           </div>
         </Col>
       </Row>
+      <div>
+
+        <h1 className="follow">Follow me on </h1>
+        <h1>
+          <a href = "https://www.instagram.com/nilanjan2039/" target="__blank"><FaInstagram className="insta"/></a>
+        </h1> 
+        <h1>
+          <a href="https://twitter.com/Nilanjan2039" target="__blank"><FaTwitter className="twitter"/></a>
+        </h1>
+        <h1 className="design">Designed by Nilanjan</h1>
+      </div>
     </Container>
   );
 };
